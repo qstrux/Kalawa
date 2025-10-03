@@ -67,7 +67,7 @@ wrangler login
 **部署命令：**
 ```bash
 # 生产环境部署
-wrangler pages deploy . --project-name=kalawa-website
+wrangler pages deploy .
 
 # 预览部署
 wrangler pages dev .

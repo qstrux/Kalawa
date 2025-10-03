@@ -64,7 +64,7 @@ deploy_cloudflare() {
     fi
     
     echo "🚀 部署到 Cloudflare Pages..."
-    wrangler pages deploy . --project-name=kalawa-website
+    wrangler pages deploy .
     
     echo "✅ Cloudflare Pages 部署完成！"
 }
