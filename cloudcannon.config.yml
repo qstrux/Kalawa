@@ -1,7 +1,14 @@
 _schema: _schema
+source: /category/
 paths:
   uploads: uploads
   static: ''
+collection_groups:
+  - heading:
+    collections:
+  - heading:
+    collections:
+      -
 timezone: America/New_York
 markdown:
   engine: commonmark
