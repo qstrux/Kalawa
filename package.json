@@ -1,0 +1,29 @@
+{
+  "name": "kalawa-website",
+  "version": "1.0.0",
+  "description": "Kalawa - Financial Services for Institutional Investors",
+  "main": "index.html",
+  "scripts": {
+    "start": "python3 -m http.server 8000",
+    "dev": "python3 -m http.server 8080",
+    "serve": "python3 -m http.server 3000",
+    "deploy:cloudflare": "wrangler pages deploy .",
+    "preview:cloudflare": "wrangler pages dev .",
+    "build": "echo 'No build step needed - static site'",
+    "test": "echo 'Testing static files...' && python3 -c 'import os; print(\"✅ index.html exists:\", os.path.exists(\"index.html\"))'"
+  },
+  "keywords": [
+    "finance",
+    "investment",
+    "institutional",
+    "kalawa",
+    "static-site"
+  ],
+  "author": "Kalawa",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/qstrux/Kalawa.git"
+  },
+  "homepage": "https://qstrux.github.io/Kalawa"
+}
