@@ -4,6 +4,11 @@
 
 ## 📋 快速开始
 
+### 🖥️ Windows 用户
+如果您在 Windows PowerShell 环境中工作，请参考 [Windows 部署指南](./WINDOWS_DEPLOY.md)
+
+### 🐧 Linux/macOS 用户
+
 ### 使用自动化部署脚本 (推荐)
 ```bash
 ./deploy.sh
