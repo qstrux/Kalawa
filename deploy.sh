@@ -64,7 +64,34 @@ deploy_cloudflare() {
     fi
     
     echo "🚀 部署到 Cloudflare Pages..."
-    wrangler pages deploy .
+    echo ""
+    echo "选择部署方式："
+    echo "1) 🌐 通过 Cloudflare Dashboard (推荐)"
+    echo "2) 💻 本地命令行部署"
+    echo ""
+    read -p "请选择 (1-2): " deploy_choice
+    
+    case $deploy_choice in
+        1)
+            echo "📋 Dashboard 部署指南："
+            echo "1. 访问: https://dash.cloudflare.com/pages"
+            echo "2. 点击 '创建项目' → '连接到 Git'"
+            echo "3. 选择 GitHub → 选择 'Kalawa' 仓库"
+            echo "4. 配置设置："
+            echo "   - Build command: 留空"
+            echo "   - Output directory: ."
+            echo "5. 点击 '保存并部署'"
+            echo ""
+            echo "🌍 部署完成后网站将在几分钟内可用"
+            ;;
+        2)
+            echo "💻 本地命令行部署..."
+            wrangler pages deploy . --project-name=kalawa-site
+            ;;
+        *)
+            echo "❌ 无效选择"
+            ;;
+    esac
     
     echo "✅ Cloudflare Pages 部署完成！"
 }
